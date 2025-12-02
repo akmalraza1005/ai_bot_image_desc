@@ -34,15 +34,15 @@ async def on_ready():
 async def help_cmd(ctx):
     await ctx.send(
         "Commands:\n"
-        "`!image` → bot asks you to upload a picture\n"
-        "`!help`  → show this message\n"
+        "`!image` - bot asks you to upload a picture\n"
+        "`!help`  - show this message\n"
     )
 
 @bot.command()
 async def image(ctx):
     waiting_for_image[ctx.author.id] = True
     print(f"DEBUG: waiting_for_image set for user {ctx.author.id}")
-    await ctx.send("Okay! Please upload the image now.")
+    await ctx.send("Please upload the image now.")
 
 @bot.event
 async def on_message(message):
@@ -116,7 +116,7 @@ async def on_message(message):
         except Exception as exc:
             import traceback
             traceback.print_exc()
-            await processing_msg.edit(content="❌ Sorry, an error occurred while processing the image.")
+            await processing_msg.edit(content="Sorry, an error occurred while processing the image.")
             print("ERROR: Exception while processing image:", exc)
 
         finally:
