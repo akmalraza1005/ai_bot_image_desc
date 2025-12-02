@@ -5,8 +5,8 @@ Discord bot that generates a short image caption and 3 tags using a Hugging Face
 
 
 ## Files
-- `bot.py` — main bot script
-- `requirements.txt` — Python dependencies
+- `bot.py` - main bot script
+- `requirements.txt` - Python dependencies
 
 
 ## Quick start (local)
